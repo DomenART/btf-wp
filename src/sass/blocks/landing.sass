@@ -1,0 +1,360 @@
+.landing
+    overflow-x: hidden
+
+.landing__intro
+    height: 750px
+    display: flex
+    align-items: center
+    justify-content: center
+    background: url('../img/intro-bg.jpg') 50% 50% no-repeat
+    background-size: cover
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        z-index: 1
+        background-color: rgba(0,0,0,0.6)
+    @media (max-width: 960px)
+        height: 450px
+
+.landing__intro-content
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: relative
+    z-index: 2
+
+.landing__intro-logo
+    margin-bottom: 65px
+    img
+        width: 280px
+        height: 147px
+
+.landing__intro-title
+    margin-bottom: 45px
+    text-align: center
+    color: #ffffff
+    font-size: 36px
+    line-height: 1.23
+    font-weight: 600
+    @media (max-width: 1200px)
+        font-size: 32px
+    @media (max-width: 640px)
+        font-size: 28px
+
+.landing__intro-button
+    padding: 18px 35px
+    background-color: #ca2027
+    color: #ffffff
+    font-size: 14px
+    white-space: nowrap
+    font-weight: 700
+    line-height: 1
+    text-transform: uppercase
+    &:hover
+        color: #ffffff
+        text-decoration: none
+        background-color: darken(#ca2027, 5%)
+
+.landing__features
+    margin-bottom: 100px
+    padding-bottom: 95px
+    position: relative
+    &::after
+        content: ''
+        width: 100%
+        position: absolute
+        bottom: 0
+        left: 0
+        border-bottom: 1px solid rgba(202, 32, 39, 0.2)
+
+.landing__features-grid
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    align-items: flex-start
+    margin-top: 45px
+    @media (max-width: 960px)
+        grid-template-columns: 1fr
+
+.landing__technics-title
+    margin-bottom: 40px
+    font-size: 52px
+    font-weight: 600
+    color: #000000
+    text-align: center
+
+.landing__technics
+    margin-bottom: 40px
+    .carousel-indicators
+        li
+            width: 8px
+            height: 8px
+            margin: 0 6px
+            border-radius: 50%
+            background-color: rgba(34, 34, 34, 0.4)
+            &.active
+                background-color:  rgba(34, 34, 34, 1)
+    .carousel-control-prev-icon
+        background: none
+        width: 20px
+        height: 20px
+        border-left: 3px solid #222222
+        border-bottom: 3px solid #222222
+        transform: rotate(45deg)
+    .carousel-control-next-icon
+        background: none
+        width: 20px
+        height: 20px
+        border-left: 3px solid #222222
+        border-bottom: 3px solid #222222
+        transform: rotate(-135deg)
+
+.landing__technics-select
+    display: none
+    width: 100%
+    margin-bottom: 60px
+    padding: 16px 30px 16px 20px
+    background: #fff url('../img/selector-icon.svg') 96% 50% no-repeat
+    background-size: auto
+    border: 3px solid #222
+    font-size: 16px
+    font-weight: 600
+    color: #222
+    appearance: none
+    @media (max-width: 960px)
+        display: block
+
+.landing__technics-tabs
+    margin-bottom: 60px
+    .nav-item
+        width: 25%
+        text-align: center
+        font-size: 20px
+        font-weight: 600
+        line-height: 1.35
+    .nav-link
+        padding: 20px 0
+        color: #777777
+        border: 0
+        border-bottom: 3px solid #eeeeee
+        &:hover
+            border-bottom: 3px solid #eeeeee
+        &.active
+            color: #222222
+            border-bottom: 3px solid #ca2027
+            &:hover
+                border-bottom: 3px solid #ca2027
+    @media (max-width: 960px)
+        display: none
+
+.landing__preorder
+    margin-bottom: 145px
+    padding: 135px 0
+    background-color: #ca2027
+
+.landing__preorder-title
+    margin-bottom: 85px
+    text-align: center
+    font-size: 52px
+    font-weight: 600
+    color: #ffffff
+    line-height: 1.23
+
+.landing__preorder-pool
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 20px
+    @media (max-width: 640px)
+        grid-template-columns: 1fr
+
+.landing__credit
+    max-width: 820px
+    margin: 0 auto
+
+.landing__credit-title
+    margin-bottom: 65px
+    text-align: center
+    font-size: 52px
+    line-height: 1.23
+    font-weight: 600
+    color: #000000
+
+.landing__credit-terms
+    padding: 0 25px
+    ol
+        padding-left: 15px
+    a
+        text-decoration: none
+        color: #405acc
+        &:hover
+            color: #5d7bff
+
+.landing__credit-result
+    margin-bottom: 40px
+    padding: 18px 24px
+    text-align: right
+    color: #ffffff
+    background-color: #424242
+    @media (max-width: 640px)
+        margin-bottom: 5px
+
+.landing__credit-desc
+    font-size: 16px
+    font-weight: 400
+    color: rgba(255,255,255,.7)
+    line-height: 1.6
+    letter-spacing: 1px
+
+.landing__credit-number
+    margin-bottom: 20px
+    font-family: $font-result
+    color: #fff
+    font-size: 21px
+    font-weight: 700
+    line-height: 1.14
+
+.landing__credit-columns
+    display: flex
+    margin-bottom: 30px
+    @media (max-width: 640px)
+        align-items: center
+    @media (max-width: 480px)
+        flex-direction: column-reverse
+
+.landing__credit-email
+    flex-basis: 50%
+    margin-right: 40px
+    padding: 20px 5px 10px 60px
+    background-color: #ca2027
+    color: #ffffff
+    font-size: 26px
+    line-height: 1.55
+    font-weight: 400
+    position: relative
+    @media (max-width: 1200px)
+        font-size: 22px
+    @media (max-width: 640px)
+        margin-right: 10px
+    @media (max-width: 480px)
+        padding: 6px 5px 10px 35px
+        font-size: 20px
+        line-height: 1.45
+
+.landing__credit-email-sign
+    width: 22px
+    height: 22px
+    position: absolute
+    top: 20px
+    left: 20px
+    background-color: #ffffff
+    border-radius: 50%
+    &::before
+        content: 'i'
+        position: absolute
+        top: 50%
+        left: 50%
+        z-index: 2
+        transform: translate(-50%,-50%)
+        color: #ca2027
+        font-size: 15px
+        font-family: 'Arial'
+        line-height: 1.55
+        font-weight: 700
+    @media (max-width: 480px)
+        width: 20px
+        height: 20px
+        top: 14px
+        left: 5px
+
+.landing__credit-doc
+    flex-basis: 50%
+    display: flex
+    @media(max-width: 480px)
+        padding: 20px
+
+.landing__credit-doc-image
+    width: 70px
+    height: 70px
+    margin-right: 10px
+
+.landing__credit-doc-text
+    color: #000000
+    font-size: 36px
+    line-height: 1.55
+    font-weight: 400
+    a
+        white-space: word-wrap
+        color: rgb(202, 32, 39)
+        text-decoration: underline
+        &:hover
+            color: rgb(202, 32, 39)
+    @media (max-width: 640px)
+        font-size: 24px
+
+.landings__contacts
+    display: flex
+    @media (max-width: 750px)
+        flex-direction: column
+
+.landings__contacts-map
+    flex-basis: 50%
+    background-color: #ca2027
+    @media (max-width: 760px)
+        height: 300px
+        flex-basis: auto
+
+.landings__contacts-phone
+    letter-spacing: -0.5px
+
+.landings__contacts-text
+    flex-basis: 50%
+    padding: 135px 70px
+    background-color: #000000
+    font-size: 24px
+    color: #ffffff
+    font-weight: 300
+    ul
+        margin-bottom: 48px
+        padding-left: 20px
+        list-style: none
+        li
+            position: relative
+            &::before
+                content: ''
+                width: 10px
+                height: 10px
+                background-color: #ffffff
+                border-radius: 50%
+                position: absolute
+                top: 10px
+                left: -22px
+        @media (max-width: 480px)
+            margin-bottom: 58px
+    @media (max-width: 1200px)
+        padding: 70px
+    @media (max-width: 960px)
+        padding: 40px
+    @media (max-width: 480px)
+        padding: 32px 20px
+
+.landings__contacts-title
+    font-size: 30px
+    margin-bottom: 40px
+    @media (max-width: 480px)
+        margin-bottom: 25px
+
+.landing__questions
+    padding-top: 100px
+    padding-bottom: 45px
+    background-color: #ca2027
+
+.landing__questions-title
+    margin-bottom: 40px
+    text-align: center
+    font-size: 52px
+    color: #ffffff
+    font-weight: 600

@@ -1,0 +1,72 @@
+.technics-item__title
+    margin-bottom: 16px
+    font-size: 28px
+    line-height: 1.17
+    font-weight: 600
+    color: #000
+
+.technics-item__parametres
+    padding-left: 20px
+    list-style: none
+    li
+        font-size: 18px
+        font-weight: 300
+        line-height: 1.55
+        position: relative
+        &::before
+            content: ''
+            width: 8px
+            height: 8px
+            background-color: #000000
+            border-radius: 50%
+            position: absolute
+            top: 8px
+            left: -17px
+
+.technics-item__wrapper
+    display: flex
+    margin-bottom: 45px
+    @media (max-width: 960px)
+        flex-direction: column
+
+.technics-item__desc
+    flex-basis: 45%
+    box-sizing: border-box
+    margin-right: 40px
+    @media (max-width: 960px)
+        margin-bottom: 20px
+
+.technics-item__photo
+    flex-basis: 55%
+    display: flex
+    align-items: center
+
+.technics-item__products
+    overflow-x: scroll
+
+.technics-item__pricelist
+    width: 100%
+    thead
+        border-bottom: 1px solid #000
+    tbody
+        tr:nth-of-type(n)
+            background: #ffffff
+        tr:nth-of-type(2n)
+            background: #eeeeee
+        tr
+            border-bottom: 1px solid #d9d9d9
+        td
+            color: #4d4c4c
+    td
+        padding: 20px
+        font-size: 18px
+        font-weight: 300
+        @media (max-width: 1200px)
+            font-size: 16px
+    th
+        padding: 20px
+        font-size: 18px
+        @media (max-width: 1200px)
+            font-size: 16px
+    @media (max-width: 960px)
+        width: 960px

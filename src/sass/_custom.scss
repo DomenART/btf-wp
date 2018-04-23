@@ -1,0 +1,29 @@
+@import 'variables';
+
+$container-max-widths: (
+    sm: 640px,
+    md: 720px,
+    lg: 960px,
+    xl: 1200px
+);
+$grid-gutter-width: 40px;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 320px,
+    md: 640px,
+    lg: 960px,
+    xl: 1600px
+);
+
+$font-family-base: 'FuturaPT', sans-serif;
+
+$input-border-color: #000;
+$input-border-radius: 0;
+$input-focus-color: #000;
+$input-focus-box-shadow: 0;
+$input-focus-border-color: #000;
+$input-padding-x: 20px;
+$input-padding-y: 10px;
+
+$modal-md: 580px

@@ -1,0 +1,96 @@
+.cart
+    width: 80px
+    height: 80px
+    background-color: transparent
+    position: fixed
+    top: 100px
+    right: 50px
+    z-index: 5
+    cursor: pointer
+    border: 0
+    border-radius: 50%
+    transition: transform 0.25s
+    &:hover
+        .cart__pic
+            transform: translate(-50%, -50%) scale(1.1)
+            transition: transform 0.25s
+        .cart__total
+            opacity: 1
+            transition: opacity 0.25s
+    @media (max-width: 640px)
+        width: 60px
+        height: 60px
+        right: 10px
+
+.cart__pic
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 80px
+    height: 80px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    border-radius: 50%
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.2)
+    background-color: rgba(255,255,255,.8)
+    transition: transform 0.25s
+    svg
+        width: 40px
+        height: 40px
+        stroke: #000
+    @media (max-width: 640px)
+        width: 60px
+        height: 60px
+        svg
+            width: 34px
+            height: 34px
+
+.cart__count
+    width: 30px
+    height: 30px
+    background-color: red
+    color: #fff
+    border-radius: 30px
+    position: absolute
+    right: -3px
+    bottom: -3px
+    text-align: center
+    line-height: 30px
+    font-family: Arial,Helvetica,sans-serif
+    @media (max-width: 640px)
+        width: 24px
+        height: 24px
+        line-height: 24px
+
+.cart__total
+    opacity: 0
+    white-space: nowrap
+    background: #292929
+    color: #fff
+    font-size: 15px
+    box-sizing: border-box
+    padding: 9px 13px
+    border-radius: 3px
+    position: absolute
+    left: calc(-100% - 50px)
+    top: 50%
+    transform: translateY(-50%)
+    transition: opacity 0.25s
+    &::before
+        content: ''
+        position: absolute
+        width: 0
+        height: 0
+        border: solid transparent
+        border-top-width: medium
+        border-right-width: medium
+        border-bottom-width: medium
+        border-left-width: medium
+        border-left-color: transparent
+        border-width: 10px
+        top: 50%
+        right: -20px
+        transform: translateY(-50%)
+        border-left-color: #292929

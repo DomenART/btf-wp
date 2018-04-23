@@ -1,0 +1,65 @@
+.preorder-item
+    background-color: #ffffff
+    position: relative
+
+.preorder-item__image
+    padding-top: 53.5%
+    position: relative
+    img
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 1
+
+.preorder-item__desc
+    padding: 27px 30px 90px
+
+.preorder-item__title
+    margin-bottom: 8px
+    color: #000000
+    font-size: 24px
+    line-height: 1.35
+    font-weight: 600
+    @media (max-width: 1200px)
+        font-size: 22px
+    @media (max-width: 1200px)
+        font-size: 20px
+
+.preorder-item__text
+    font-size: 20px
+    font-weight: 300
+    color: #000000
+    line-height: 1.55
+    ul
+        padding-left: 20px
+        list-style: none
+        li
+            position: relative
+            &::before
+                content: ''
+                width: 8px
+                height: 8px
+                background-color: #000000
+                border-radius: 50%
+                position: absolute
+                top: 8px
+                left: -15px
+    span
+        font-weight: 700
+        color: #ca2027
+
+.preorder-item__button
+    position: absolute
+    bottom: 30px
+    left: 30px
+    padding: 15px 35px
+    border-radius: 5px
+    border: 0
+    background-color: #ca2027
+    font-size: 15px
+    font-weight: 700
+    line-height: 1
+    color: #ffffff
+    cursor: pointer
+    &:hover
+        background-color: darken(#ca2027, 10%)
