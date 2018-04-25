@@ -6,22 +6,23 @@
     color: #000
 
 .technics-item__parametres
-    padding-left: 20px
-    list-style: none
-    li
-        font-size: 18px
-        font-weight: 300
-        line-height: 1.55
-        position: relative
-        &::before
-            content: ''
-            width: 8px
-            height: 8px
-            background-color: #000000
-            border-radius: 50%
-            position: absolute
-            top: 8px
-            left: -17px
+    ul
+        padding-left: 20px
+        list-style: none
+        li
+            font-size: 18px
+            font-weight: 300
+            line-height: 1.55
+            position: relative
+            &::before
+                content: ''
+                width: 8px
+                height: 8px
+                background-color: #000000
+                border-radius: 50%
+                position: absolute
+                top: 8px
+                left: -17px
 
 .technics-item__wrapper
     display: flex
@@ -40,11 +41,20 @@
     flex-basis: 55%
     display: flex
     align-items: center
+    .carousel
+        display: flex
+        align-items: center
+    .carousel-inner
+        display: flex
+        align-items: center
+        height: 560px
+        @media (max-width: 640px)
+            height: 240px
 
 .technics-item__products
     overflow-x: scroll
 
-.technics-item__pricelist
+.technics-item__table
     width: 100%
     thead
         border-bottom: 1px solid #000

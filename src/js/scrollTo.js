@@ -1,5 +1,3 @@
-import jQueryScrollTo from "jquery-scrollTo"
+import SmoothScroll from 'smooth-scroll'
 
-jQuery(function($) {
-  $(".main-header__menu-list a").scrollTo();
-});
+var scroll = new SmoothScroll('[data-scroll]');

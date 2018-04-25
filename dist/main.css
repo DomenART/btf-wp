@@ -6449,15 +6449,10 @@ a.text-dark:hover, a.text-dark:focus {
     .landing__features-grid {
       grid-template-columns: 1fr; } }
 
-.landing__technics-title {
-  margin-bottom: 40px;
-  font-size: 52px;
-  font-weight: 600;
-  color: #000000;
-  text-align: center; }
-
 .landing__technics {
   margin-bottom: 40px; }
+  .landing__technics .nav-tabs {
+    border-bottom: 0; }
   .landing__technics .carousel-indicators li {
     width: 8px;
     height: 8px;
@@ -6483,6 +6478,13 @@ a.text-dark:hover, a.text-dark:focus {
     -webkit-transform: rotate(-135deg);
             transform: rotate(-135deg); }
 
+.landing__technics-title {
+  margin-bottom: 40px;
+  font-size: 52px;
+  font-weight: 600;
+  color: #000000;
+  text-align: center; }
+
 .landing__technics-select {
   display: none;
   width: 100%;
@@ -6502,9 +6504,11 @@ a.text-dark:hover, a.text-dark:focus {
       display: block; } }
 
 .landing__technics-tabs {
+  display: flex;
   margin-bottom: 60px; }
   .landing__technics-tabs .nav-item {
-    width: 25%;
+    flex-basis: 25%;
+    flex-grow: 1;
     text-align: center;
     font-size: 20px;
     font-weight: 600;
@@ -6957,15 +6961,15 @@ a.text-dark:hover, a.text-dark:focus {
   font-weight: 600;
   color: #000; }
 
-.technics-item__parametres {
+.technics-item__parametres ul {
   padding-left: 20px;
   list-style: none; }
-  .technics-item__parametres li {
+  .technics-item__parametres ul li {
     font-size: 18px;
     font-weight: 300;
     line-height: 1.55;
     position: relative; }
-    .technics-item__parametres li::before {
+    .technics-item__parametres ul li::before {
       content: '';
       width: 8px;
       height: 8px;
@@ -6994,37 +6998,47 @@ a.text-dark:hover, a.text-dark:focus {
   flex-basis: 55%;
   display: flex;
   align-items: center; }
+  .technics-item__photo .carousel {
+    display: flex;
+    align-items: center; }
+  .technics-item__photo .carousel-inner {
+    display: flex;
+    align-items: center;
+    height: 560px; }
+    @media (max-width: 640px) {
+      .technics-item__photo .carousel-inner {
+        height: 240px; } }
 
 .technics-item__products {
   overflow-x: scroll; }
 
-.technics-item__pricelist {
+.technics-item__table {
   width: 100%; }
-  .technics-item__pricelist thead {
+  .technics-item__table thead {
     border-bottom: 1px solid #000; }
-  .technics-item__pricelist tbody tr:nth-of-type(n) {
+  .technics-item__table tbody tr:nth-of-type(n) {
     background: #ffffff; }
-  .technics-item__pricelist tbody tr:nth-of-type(2n) {
+  .technics-item__table tbody tr:nth-of-type(2n) {
     background: #eeeeee; }
-  .technics-item__pricelist tbody tr {
+  .technics-item__table tbody tr {
     border-bottom: 1px solid #d9d9d9; }
-  .technics-item__pricelist tbody td {
+  .technics-item__table tbody td {
     color: #4d4c4c; }
-  .technics-item__pricelist td {
+  .technics-item__table td {
     padding: 20px;
     font-size: 18px;
     font-weight: 300; }
     @media (max-width: 1200px) {
-      .technics-item__pricelist td {
+      .technics-item__table td {
         font-size: 16px; } }
-  .technics-item__pricelist th {
+  .technics-item__table th {
     padding: 20px;
     font-size: 18px; }
     @media (max-width: 1200px) {
-      .technics-item__pricelist th {
+      .technics-item__table th {
         font-size: 16px; } }
   @media (max-width: 960px) {
-    .technics-item__pricelist {
+    .technics-item__table {
       width: 960px; } }
 
 .purchase-button {
@@ -7087,7 +7101,7 @@ a.text-dark:hover, a.text-dark:focus {
         position: absolute;
         top: 8px;
         left: -15px; }
-  .preorder-item__text span {
+  .preorder-item__text strong {
     font-weight: 700;
     color: #ca2027; }
 
@@ -7197,7 +7211,7 @@ a.text-dark:hover, a.text-dark:focus {
   color: #ffffff;
   line-height: 1.55;
   font-weight: 300; }
-  .question-item__text span {
+  .question-item__text strong {
     font-weight: 700; }
 
 .menu-button {
