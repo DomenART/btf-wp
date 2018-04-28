@@ -129,21 +129,32 @@
 											</tr>
 										</thead>
 										<tbody>
-											<?php foreach(get_field('technic_models', $post->id) as $row): ?>
+											<?php foreach(get_field('technic_models', $post) as $key => $row):
+												$modelstatus = $row['technic_models-status'];
+												$product_price_from = $row['technic_models-from'];
+											?>
 											<tr>
 												<td><?php echo $row['technic_models-title'] ?></td>
 												<td><?php echo $row['technic_models-year'] ?></td>
 												<td><?php echo $row['technic_models-count'] ?></td>
-												<td><?php echo $row['technic_models-price'] ?></td>
 												<td>
 													<?php
-														$modelstatus = $row['technic_models-status'];
+														if ($product_price_from == 'Да') echo 'от ';
+														echo number_format($row['technic_models-price'], 0, '.', ' ');
+													?>
+													р.
+												</td>
+												<td>
+													<?php
+														$product_id = $post->ID . '-' . $key;
+														$product_title = $row['technic_models-title'];
+														$product_price = $row['technic_models-price'];
 														switch ($modelstatus) {
 															case 'Продано':
 																echo "Продано";
 																break;
 															case 'Купить':
-																echo '<button class="purchase-button" type="button" data-toggle="modal" data-target="#purchaseModal">Как купить?</button>';
+																echo '<button class="purchase-button" type="button" data-toggle="modal" data-target="#purchaseModal" data-product-id="' . $product_id . '" data-product-title="'. $product_title .'" data-product-price="' . $product_price . '">Как купить?</button>';
 																break;
 															case 'Предзаказ':
 																echo '<button class="purchase-button" type="button" data-toggle="modal" data-target="#preorderModal">Предзаказ</button>';
@@ -186,8 +197,8 @@
 			</div>
 		</section>
 		<section class="landing__credit" id="credit">
-			<h2 class="landing__credit-title">Калькулятор рассрочки</h2>
-			<form class="credit">
+			<h2 class="landing__credit-title">Рассрочка</h2>
+			<form class="credit" style="display: none;">
 				<div class="credit__time-wrapper">
 					<label class="credit__input-desc">Срок (от 6 до 36 месяцев)</label>
 					<input class="credit__time" type="range">
@@ -203,7 +214,7 @@
 					</div>
 				</div>
 			</form>
-			<div class="landing__credit-terms">
+			<div class="landing__credit-terms" style="display: none;">
 				<p>
 					<b>Генеральные условия для приобретения техники БТФ в рассрочку</b><br>
 					<ol>
@@ -223,7 +234,7 @@
 					</ol>
 				</p>
 			</div>
-			<div class="landing__credit-result">
+			<div class="landing__credit-result" style="display: none;">
 				<div class="landing__credit-desc">
 					Сумма рассрочки
 				</div>
@@ -296,6 +307,9 @@
 			<div class="purchase-popup__content modal-content">
 				<div class="purchase-popup__title">Как купить?</div>
 				<div class="purchase-popup__product-pool">
+
+
+
 					<div class="purchase-popup__product">
 						<div class="purchase-popup__product-leftside">
 							<div class="purchase-popup__product-title">
@@ -314,6 +328,9 @@
 						</div>
 						<button class="purchase-popup__clear"></button>
 					</div>
+
+
+
 				</div>
 				<div class="purchase-popup__products-total">
 					Total: 42100000 р.

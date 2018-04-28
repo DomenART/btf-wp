@@ -6824,8 +6824,9 @@ a.text-dark:hover, a.text-dark:focus {
 .main-header__content {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  width: 100%; }
+  justify-content: center;
+  width: 100%;
+  position: relative; }
   @media (max-width: 1600px) {
     .main-header__content {
       justify-content: center; } }
@@ -6834,11 +6835,10 @@ a.text-dark:hover, a.text-dark:focus {
       display: none; } }
 
 .main-header__leftside {
-  display: flex;
-  flex-basis: 65.8%;
-  justify-content: flex-end; }
+  display: flex; }
   @media (max-width: 1600px) {
     .main-header__leftside {
+      width: 66%;
       justify-content: center; } }
 
 .main-header__menu-list {
@@ -6871,7 +6871,13 @@ a.text-dark:hover, a.text-dark:focus {
   flex-basis: 33%;
   align-items: center;
   justify-content: flex-end;
-  margin-left: 15px; }
+  position: absolute;
+  right: 15px; }
+  @media (max-width: 1600px) {
+    .main-header__rightside {
+      width: 33%;
+      position: static;
+      right: 0; } }
 
 .main-header__drivers {
   display: block;
@@ -6997,17 +7003,14 @@ a.text-dark:hover, a.text-dark:focus {
 .technics-item__photo {
   flex-basis: 55%;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  height: 560px; }
+  @media (max-width: 640px) {
+    .technics-item__photo {
+      height: 240px; } }
   .technics-item__photo .carousel {
     display: flex;
     align-items: center; }
-  .technics-item__photo .carousel-inner {
-    display: flex;
-    align-items: center;
-    height: 560px; }
-    @media (max-width: 640px) {
-      .technics-item__photo .carousel-inner {
-        height: 240px; } }
 
 .technics-item__products {
   overflow-x: scroll; }
