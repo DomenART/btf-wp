@@ -5,6 +5,6 @@
     <meta name="format-detection" content="telephone=no">
     <title><?php wp_title( '|', true, 'right' ); ?></title>
     <link rel="stylesheet" media="all" href="<?php echo get_template_directory_uri(); ?>/dist/main.css">
-     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <?php wp_head(); ?>
 </head>

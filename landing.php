@@ -154,10 +154,10 @@
 																echo "Продано";
 																break;
 															case 'Купить':
-																echo '<button class="purchase-button" type="button" data-toggle="modal" data-target="#purchaseModal" data-product-id="' . $product_id . '" data-product-title="'. $product_title .'" data-product-price="' . $product_price . '">Как купить?</button>';
+																echo '<button class="technics-item__button js-purchase-btn" type="button" data-toggle="modal" data-target="#purchaseModal" data-product-id="' . $product_id . '" data-product-title="'. $product_title .'" data-product-price="' . $product_price . '">Как купить?</button>';
 																break;
 															case 'Предзаказ':
-																echo '<button class="purchase-button" type="button" data-toggle="modal" data-target="#preorderModal">Предзаказ</button>';
+																echo '<button class="technics-item__button js-preorder-btn" type="button" data-toggle="modal" data-target="#preorderModal" data-preorder-title="'. $product_title . '">Предзаказ</button>';
 																break;
 														}
 													?>
@@ -181,7 +181,7 @@
 				<h2 class="landing__preorder-title">Предзаказ</h2>
 				<div class="landing__preorder-pool">
 					<?php foreach(get_field('preorder') as $row): ?>
-					<article class="preorder-item">
+					<div class="preorder-item">
 						<div class="preorder-item__image" style="background: url('<?php echo $row['preorder_photo'] ?>') 50% 50%; background-size: cover">
 						</div>
 						<div class="preorder-item__desc">
@@ -190,8 +190,8 @@
 								<?php echo $row['preorder_text'] ?>
 							</div>
 						</div>
-						<button type="button" class="preorder-item__button" data-toggle="modal" data-target="#preorderModal">Запросить информацию</button>
-					</article>
+						<button type="button" class="preorder-item__button js-preorder-btn" data-toggle="modal" data-target="#preorderModal" data-preorder-title="<?php echo $row['preorder_title'] ?>">Запросить информацию</button>
+					</div>
 					<?php endforeach; ?>
 				</div>
 			</div>
@@ -271,11 +271,12 @@
 			<div class="landings__contacts-map embed-responsive">
 				<iframe class="embed-responsive-item" src="https://yandex.ru/map-widget/v1/?um=constructor%3A0af0b2771bfa659533ab2d4b0cd41e5b1fe82f3b7ea98a551b80ed321b014650&amp;source=constructor" width="941" height="659" frameborder="0"></iframe>
 			</div>
-			<div class="landings__contacts-text">
+			<address class="landings__contacts-text">
 				<div class="landings__contacts-title">
 					Контакты
 				</div>
 				<?php the_field('contacts'); ?>
+			</address>
 		</section>
 		<section class="landing__questions" id="questions">
 			<div class="container">
@@ -291,12 +292,12 @@
 				</div>
 				<?php endforeach; ?>
 		</section>
-		<button class="cart" data-toggle="modal" data-target="#purchaseModal">
+		<button class="cart hidden" data-toggle="modal" data-target="#purchaseModal">
 			<span class="cart__pic" data-toggle="popover" data-trigger="hover" data-placement="left" data-content="= 150 0000 р.">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><descr style="color:#bebebe;">Cart</descr><path fill="none" stroke-width="2" stroke-miterlimit="10" d="M44 18h10v45H10V18h10z"></path><path fill="none" stroke-width="2" stroke-miterlimit="10" d="M22 24V11c0-5.523 4.477-10 10-10s10 4.477 10 10v13"></path></svg>
 			</span>
-			<span class="cart__count">9</span>
-			<span class="cart__total"> = 10 000 р.</span>
+			<span class="cart__count"></span>
+			<span class="cart__total"></span>
 		</button>
 	</div>
 	<div class="purchase-popup modal fade" id="purchaseModal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -306,34 +307,9 @@
 		<div class="modal-dialog" role="document">
 			<div class="purchase-popup__content modal-content">
 				<div class="purchase-popup__title">Как купить?</div>
-				<div class="purchase-popup__product-pool">
-
-
-
-					<div class="purchase-popup__product">
-						<div class="purchase-popup__product-leftside">
-							<div class="purchase-popup__product-title">
-								MAN TGS 19-400 2012 г.
-							</div>
-						</div>
-						<div class="purchase-popup__product-rightside">
-							<div class="purchase-popup__counter">
-								<button class="purchase-popup__counter-minus"></button>
-								<div class="purchase-popup__counter-number">1</div>
-								<button class="purchase-popup__counter-plus"></button>
-							</div>
-							<div class="purchase-popup__sum">
-								2200000 р.
-							</div>
-						</div>
-						<button class="purchase-popup__clear"></button>
-					</div>
-
-
-
-				</div>
+				<div class="purchase-popup__product-pool"></div>
 				<div class="purchase-popup__products-total">
-					Total: 42100000 р.
+					Итого: <span class="js-total-cart"></span> р.
 				</div>
 				<div class="purchase-popup__text">
 					Заполните форму и мы свяжемся с вами в ближайшее время. Обсудим состояние автомобиля, варианты осмотра и способы оплаты.
@@ -363,7 +339,7 @@
 		<div class="modal-dialog" role="document">
 			<div class="preorder-popup__content modal-content">
 				<div class="preorder-popup__title">
-					Предзаказ MAN TGS 19-400
+					Предзаказ <span class="js-preorder-title"></span>
 				</div>
 				<div class="preorder-popup__text">
 					Планируете приобрести MAN? Заполните форму и мы свяжемся с вами в ближайшее время. Обсудим количество, возраст авто и стоимость.

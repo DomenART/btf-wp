@@ -48,7 +48,7 @@
 
 .landing__intro-button
     padding: 18px 35px
-    background-color: #ca2027
+    background-color: $theme-color
     color: #ffffff
     font-size: 14px
     white-space: nowrap
@@ -58,7 +58,7 @@
     &:hover
         color: #ffffff
         text-decoration: none
-        background-color: darken(#ca2027, 5%)
+        background-color: darken($theme-color, 5%)
 
 .landing__features
     margin-bottom: 100px
@@ -149,16 +149,16 @@
             border-bottom: 3px solid #eeeeee
         &.active
             color: #222222
-            border-bottom: 3px solid #ca2027
+            border-bottom: 3px solid $theme-color
             &:hover
-                border-bottom: 3px solid #ca2027
+                border-bottom: 3px solid $theme-color
     @media (max-width: 960px)
         display: none
 
 .landing__preorder
     margin-bottom: 145px
     padding: 135px 0
-    background-color: #ca2027
+    background-color: $theme-color
 
 .landing__preorder-title
     margin-bottom: 85px
@@ -233,7 +233,7 @@
     flex-basis: 50%
     margin-right: 40px
     padding: 20px 5px 10px 60px
-    background-color: #ca2027
+    background-color: $theme-color
     color: #ffffff
     font-size: 26px
     line-height: 1.55
@@ -263,7 +263,7 @@
         left: 50%
         z-index: 2
         transform: translate(-50%,-50%)
-        color: #ca2027
+        color: $theme-color
         font-size: 15px
         font-family: 'Arial'
         line-height: 1.55
@@ -292,10 +292,10 @@
     font-weight: 400
     a
         white-space: word-wrap
-        color: rgb(202, 32, 39)
+        color: $theme-color
         text-decoration: underline
         &:hover
-            color: rgb(202, 32, 39)
+            color: $theme-color
     @media (max-width: 640px)
         font-size: 24px
 
@@ -306,7 +306,7 @@
 
 .landings__contacts-map
     flex-basis: 50%
-    background-color: #ca2027
+    background-color: $theme-color
     @media (max-width: 760px)
         height: 300px
         flex-basis: auto
@@ -316,11 +316,13 @@
 
 .landings__contacts-text
     flex-basis: 50%
+    margin-bottom: 0
     padding: 135px 70px
     background-color: #000000
     font-size: 24px
     color: #ffffff
     font-weight: 300
+    font-style: normal
     ul
         margin-bottom: 48px
         padding-left: 20px
@@ -354,7 +356,7 @@
 .landing__questions
     padding-top: 100px
     padding-bottom: 45px
-    background-color: #ca2027
+    background-color: $theme-color
 
 .landing__questions-title
     margin-bottom: 40px
