@@ -6416,7 +6416,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .landing__intro-button {
   padding: 18px 35px;
-  background-color: #3daed4;
+  background-color: #004d7f;
   color: #ffffff;
   font-size: 14px;
   white-space: nowrap;
@@ -6426,7 +6426,7 @@ a.text-dark:hover, a.text-dark:focus {
   .landing__intro-button:hover {
     color: #ffffff;
     text-decoration: none;
-    background-color: #2da3cb; }
+    background-color: #003e66; }
 
 .landing__features {
   margin-bottom: 100px;
@@ -6522,9 +6522,9 @@ a.text-dark:hover, a.text-dark:focus {
       border-bottom: 3px solid #eeeeee; }
     .landing__technics-tabs .nav-link.active {
       color: #222222;
-      border-bottom: 3px solid #3daed4; }
+      border-bottom: 3px solid #004d7f; }
       .landing__technics-tabs .nav-link.active:hover {
-        border-bottom: 3px solid #3daed4; }
+        border-bottom: 3px solid #004d7f; }
   @media (max-width: 960px) {
     .landing__technics-tabs {
       display: none; } }
@@ -6532,7 +6532,7 @@ a.text-dark:hover, a.text-dark:focus {
 .landing__preorder {
   margin-bottom: 145px;
   padding: 135px 0;
-  background-color: #3daed4; }
+  background-color: #004d7f; }
 
 .landing__preorder-title {
   margin-bottom: 85px;
@@ -6611,7 +6611,7 @@ a.text-dark:hover, a.text-dark:focus {
   flex-basis: 50%;
   margin-right: 40px;
   padding: 20px 5px 10px 60px;
-  background-color: #3daed4;
+  background-color: #004d7f;
   color: #ffffff;
   font-size: 26px;
   line-height: 1.55;
@@ -6645,7 +6645,7 @@ a.text-dark:hover, a.text-dark:focus {
     z-index: 2;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    color: #3daed4;
+    color: #004d7f;
     font-size: 15px;
     font-family: 'Arial';
     line-height: 1.55;
@@ -6676,10 +6676,10 @@ a.text-dark:hover, a.text-dark:focus {
   font-weight: 400; }
   .landing__credit-doc-text a {
     white-space: word-wrap;
-    color: #3daed4;
+    color: #004d7f;
     text-decoration: underline; }
     .landing__credit-doc-text a:hover {
-      color: #3daed4; }
+      color: #004d7f; }
   @media (max-width: 640px) {
     .landing__credit-doc-text {
       font-size: 24px; } }
@@ -6692,7 +6692,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .landings__contacts-map {
   flex-basis: 50%;
-  background-color: #3daed4; }
+  background-color: #004d7f; }
   @media (max-width: 760px) {
     .landings__contacts-map {
       height: 300px;
@@ -6748,7 +6748,7 @@ a.text-dark:hover, a.text-dark:focus {
 .landing__questions {
   padding-top: 100px;
   padding-bottom: 45px;
-  background-color: #3daed4; }
+  background-color: #004d7f; }
 
 .landing__questions-title {
   margin-bottom: 40px;
@@ -6898,7 +6898,7 @@ a.text-dark:hover, a.text-dark:focus {
 .main-header__contacts-button {
   display: block;
   padding: 10px 30px;
-  background-color: #3daed4;
+  background-color: #004d7f;
   color: #ffffff;
   font-size: 15px;
   white-space: nowrap;
@@ -6906,7 +6906,7 @@ a.text-dark:hover, a.text-dark:focus {
   .main-header__contacts-button:hover {
     color: #ffffff;
     text-decoration: none;
-    background-color: #2da3cb; }
+    background-color: #003e66; }
 
 .features-item {
   display: flex;
@@ -6916,7 +6916,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 35px;
   margin: 0;
   border-bottom: 0;
-  border-right: 1px solid #3daed4;
+  border-right: 1px solid #004d7f;
   padding-top: 0; }
   .features-item:first-of-type {
     padding-top: 0; }
@@ -6926,7 +6926,7 @@ a.text-dark:hover, a.text-dark:focus {
     .features-item {
       padding: 35px;
       border-right: 0;
-      border-bottom: 1px solid #3daed4; }
+      border-bottom: 1px solid #004d7f; }
       .features-item:last-of-type {
         border-bottom: 0; } }
 
@@ -6947,7 +6947,7 @@ a.text-dark:hover, a.text-dark:focus {
   font-weight: 600;
   color: #000000; }
   .features-item__title span {
-    color: #3daed4; }
+    color: #004d7f; }
   @media (min-width: 1200px) {
     .features-item__title {
       font-size: 24px; } }
@@ -7048,7 +7048,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .technics-item__button {
   padding: 10px 30px;
-  background-color: #3daed4;
+  background-color: #004d7f;
   font-size: 14px;
   font-weight: 700;
   color: #ffffff;
@@ -7056,7 +7056,7 @@ a.text-dark:hover, a.text-dark:focus {
   border: 0;
   cursor: pointer; }
   .technics-item__button:hover {
-    background-color: #2892b6; }
+    background-color: #002e4c; }
 
 .preorder-item {
   background-color: #ffffff;
@@ -7108,7 +7108,7 @@ a.text-dark:hover, a.text-dark:focus {
         left: -15px; }
   .preorder-item__text strong {
     font-weight: 700;
-    color: #3daed4; }
+    color: #004d7f; }
 
 .preorder-item__button {
   position: absolute;
@@ -7117,14 +7117,14 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 15px 35px;
   border-radius: 5px;
   border: 0;
-  background-color: #3daed4;
+  background-color: #004d7f;
   font-size: 15px;
   font-weight: 700;
   line-height: 1;
   color: #ffffff;
   cursor: pointer; }
   .preorder-item__button:hover {
-    background-color: #2892b6; }
+    background-color: #002e4c; }
 
 .credit {
   margin-bottom: 36px;
@@ -7455,14 +7455,14 @@ a.text-dark:hover, a.text-dark:focus {
   width: 100%;
   height: 60px;
   color: #ffffff;
-  background-color: #3daed4;
+  background-color: #004d7f;
   border: 0;
   font-size: 16px;
   font-weight: 700;
   white-space: nowrap;
   cursor: pointer; }
   .purchase-popup__submit:hover {
-    background-color: #2892b6; }
+    background-color: #002e4c; }
 
 .modal-dialog {
   max-width: 560px; }
@@ -7527,14 +7527,14 @@ a.text-dark:hover, a.text-dark:focus {
   width: 100%;
   height: 54px;
   color: #ffffff;
-  background-color: #3daed4;
+  background-color: #004d7f;
   border: 0;
   font-size: 16px;
   font-weight: 700;
   white-space: nowrap;
   cursor: pointer; }
   .preorder-popup__submit:hover {
-    background-color: #2892b6; }
+    background-color: #002e4c; }
 
 .preorder-popup__terms {
   text-align: center;
@@ -7614,7 +7614,7 @@ a.text-dark:hover, a.text-dark:focus {
 .cart__count {
   width: 30px;
   height: 30px;
-  background-color: #3daed4;
+  background-color: #004d7f;
   color: #fff;
   border-radius: 30px;
   position: absolute;

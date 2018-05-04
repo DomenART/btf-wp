@@ -90,32 +90,34 @@
 											<?php the_field('technic_parametres', $post->id); ?>
 										</div>
 									</div>
-									<div class="technics-item__photo">
-										<div id="carouselIndicators-<?php echo $key ?>" class="carousel slide w-100" data-ride="pause" data-interval="false">
-											<ol class="carousel-indicators">
-												<?php foreach(get_field('technic_gallery', $post->id) as $imagekey => $image): ?>
-												<li <?php if ($imagekey == 0) echo 'class="active"' ?> data-target="#carouselIndicators-<?php echo $key ?>" data-slide-to="<?php echo $imagekey ?>"></li>
-												<?php endforeach; ?>
-											</ol>
-											<div class="carousel-inner">
-												<?php foreach(get_field('technic_gallery', $post->id) as $imagekey => $image): ?>
-												<div class="carousel-item <?php if ($imagekey == 0) echo "active" ?>">
-													<a href="<?php echo $image['url']; ?>" data-toggle="lightbox" data-gallery="gallery-<?php echo $key ?>">
-														<img class="d-block w-100" src="<?php echo $image['url']; ?>" data-lightbox="technic" alt="">
-													</a>
+									<?php if (get_post_meta($post->ID, 'technic_gallery', true) !== '') :  ?>
+										<div class="technics-item__photo">
+											<div id="carouselIndicators-<?php echo $key ?>" class="carousel slide w-100" data-ride="pause" data-interval="false">
+												<ol class="carousel-indicators">
+													<?php foreach(get_field('technic_gallery', $post->id) as $imagekey => $image): ?>
+													<li <?php if ($imagekey == 0) echo 'class="active"' ?> data-target="#carouselIndicators-<?php echo $key ?>" data-slide-to="<?php echo $imagekey ?>"></li>
+													<?php endforeach; ?>
+												</ol>
+												<div class="carousel-inner">
+													<?php foreach(get_field('technic_gallery', $post->id) as $imagekey => $image): ?>
+													<div class="carousel-item <?php if ($imagekey == 0) echo "active" ?>">
+														<a href="<?php echo $image['url']; ?>" data-toggle="lightbox" data-gallery="gallery-<?php echo $key ?>">
+															<img class="d-block w-100" src="<?php echo $image['url']; ?>" data-lightbox="technic" alt="">
+														</a>
+													</div>
+													<?php endforeach; ?>
 												</div>
-												<?php endforeach; ?>
+												<a class="carousel-control-prev" href="#carouselIndicators-<?php echo $key ?>" role="button" data-slide="prev">
+													<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+													<span class="sr-only">Previous</span>
+												</a>
+												<a class="carousel-control-next" href="#carouselIndicators-<?php echo $key ?>" role="button" data-slide="next">
+													<span class="carousel-control-next-icon" aria-hidden="true"></span>
+													<span class="sr-only">Next</span>
+												</a>
 											</div>
-											<a class="carousel-control-prev" href="#carouselIndicators-<?php echo $key ?>" role="button" data-slide="prev">
-												<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-												<span class="sr-only">Previous</span>
-											</a>
-											<a class="carousel-control-next" href="#carouselIndicators-<?php echo $key ?>" role="button" data-slide="next">
-												<span class="carousel-control-next-icon" aria-hidden="true"></span>
-												<span class="sr-only">Next</span>
-											</a>
 										</div>
-									</div>
+									<?php endif; ?>
 								</div>
 								<div class="technics-item__products">
 									<table class="technics-item__table">
@@ -139,10 +141,14 @@
 												<td><?php echo $row['technic_models-count'] ?></td>
 												<td>
 													<?php
-														if ($product_price_from == 'Да') echo 'от ';
-														echo number_format($row['technic_models-price'], 0, '.', ' ');
+														if ($row['technic_models-price'] == '') {
+															echo 'по запросу';
+														} else {
+															if ($product_price_from == 'Да') echo 'от ';
+															echo number_format($row['technic_models-price'], 0, '.', '');
+															echo 'р.';
+														}
 													?>
-													р.
 												</td>
 												<td>
 													<?php
