@@ -9,8 +9,8 @@
 	            <ul class="main-header__menu-list">
 	                <li><a data-scrollto="contacts" href="#contacts" data-scroll>Где посмотреть?</a></li>
 	                <li><a data-scrollto="contacts" href="#questions" data-scroll>Оплата и доставка</a></li>
-	                <li><a data-scrollto="contacts" href="#credit"  data-scroll>Рассрочка</a></li>
-	                <li><a data-scrollto="contacts" href="#preorder" data-scroll>Предзаказ</a></li>
+	                <!-- <li><a data-scrollto="contacts" href="#credit"  data-scroll>Рассрочка</a></li>
+	                <li><a data-scrollto="contacts" href="#preorder" data-scroll>Предзаказ</a></li> -->
 	            </ul>
 	        </nav>
 	        <div class="main-header__rightside">
