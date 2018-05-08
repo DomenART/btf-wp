@@ -6443,11 +6443,11 @@ a.text-dark:hover, a.text-dark:focus {
 .landing__features-cols {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
   margin-top: 45px; }
   @media (max-width: 960px) {
     .landing__features-cols {
-      flex-direction: column; } }
+      flex-direction: column;
+      align-items: center; } }
 
 .landing__technics {
   margin-bottom: 40px; }
@@ -6914,7 +6914,6 @@ a.text-dark:hover, a.text-dark:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
   padding: 35px;
   margin: 0;
   border-bottom: 0;
@@ -6926,6 +6925,7 @@ a.text-dark:hover, a.text-dark:focus {
     border-right: 0; }
   @media (max-width: 960px) {
     .features-item {
+      width: 100%;
       padding: 35px;
       border-right: 0;
       border-bottom: 1px solid #004d7f; }
