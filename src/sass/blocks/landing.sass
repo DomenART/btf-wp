@@ -72,13 +72,13 @@
         left: 0
         border-bottom: 1px solid rgba(202, 32, 39, 0.2)
 
-.landing__features-grid
-    display: grid
-    grid-template-columns: repeat(4, 1fr)
+.landing__features-cols
+    display: flex
+    justify-content: center
     align-items: flex-start
     margin-top: 45px
     @media (max-width: 960px)
-        grid-template-columns: 1fr
+        flex-direction: column
 
 .landing__technics
     margin-bottom: 40px

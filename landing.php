@@ -28,7 +28,7 @@
 		<div class="landing__intro">
 			<div class="landing__intro-content">
 				<div class="landing__intro-logo">
-					<img src="<?php echo get_template_directory_uri(); ?>/dist/img/logo.png" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/dist/img/logo.svg" alt="">
 				</div>
 				<h1 class="landing__intro-title">
 					<?php the_field('intro-title'); ?>
@@ -38,7 +38,7 @@
 		</div>
 		<div class="container">
 			<section class="landing__features">
-				<div class="landing__features-grid">
+				<div class="landing__features-cols">
 					<?php foreach(get_field('features') as $row): ?>
 					<div class="features-item">
 						<div class="features-item__pic">
@@ -61,6 +61,7 @@
 				<?php
 					$params = array(
 						'post_type' => 'technics',
+						'numberposts' => -1,
 						'order'     => 'ASC'
 					);
 					$posts = get_posts($params);
@@ -75,6 +76,7 @@
 					<li class="nav-item">
 						<a class="nav-link <?php if ($key == 0) echo "active" ?>" data-toggle="tab" href="#technic-group-<?php echo $key ?>"><?php the_title(); ?></a>
 					</li>
+					<?php echo $key; ?>
 					<?php endforeach; ?>
 				</ul>
 				<div class="tab-content" id="myTabContent">
@@ -182,7 +184,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="landing__preorder" id="preorder">
+		<section class="landing__preorder" id="preorder" style="display: none">
 			<div class="container">
 				<h2 class="landing__preorder-title">Предзаказ</h2>
 				<div class="landing__preorder-pool">
@@ -202,9 +204,9 @@
 				</div>
 			</div>
 		</section>
-		<section class="landing__credit" id="credit">
+		<section class="landing__credit" id="credit" style="display: none">
 			<h2 class="landing__credit-title">Рассрочка</h2>
-			<form class="credit" style="display: none;">
+			<form class="credit">
 				<div class="credit__time-wrapper">
 					<label class="credit__input-desc">Срок (от 6 до 36 месяцев)</label>
 					<input class="credit__time" type="range">
