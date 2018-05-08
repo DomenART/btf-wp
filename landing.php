@@ -76,7 +76,6 @@
 					<li class="nav-item">
 						<a class="nav-link <?php if ($key == 0) echo "active" ?>" data-toggle="tab" href="#technic-group-<?php echo $key ?>"><?php the_title(); ?></a>
 					</li>
-					<?php echo $key; ?>
 					<?php endforeach; ?>
 				</ul>
 				<div class="tab-content" id="myTabContent">

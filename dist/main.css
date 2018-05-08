@@ -6438,7 +6438,7 @@ a.text-dark:hover, a.text-dark:focus {
     position: absolute;
     bottom: 0;
     left: 0;
-    border-bottom: 1px solid rgba(202, 32, 39, 0.2); }
+    border-bottom: 1px solid #004d7f; }
 
 .landing__features-cols {
   display: flex;
