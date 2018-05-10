@@ -6911,6 +6911,20 @@ a.text-dark:hover, a.text-dark:focus {
     text-decoration: none;
     background-color: #003e66; }
 
+.main-footer {
+  background-color: #000;
+  height: 80px; }
+
+.main-footer__content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+
+.main-footer__developer {
+  color: #fff; }
+  .main-footer__developer:hover {
+    color: #fff; }
+
 .features-item {
   flex-basis: 20%;
   flex-grow: 1;

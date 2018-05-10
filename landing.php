@@ -14,7 +14,7 @@
 	            </ul>
 	        </nav>
 	        <div class="main-header__rightside">
-	            <a class="main-header__drivers" href="https://бтф.рф/?utm_source=btftrucks">Ищем водителей категории Е</a>
+	            <a class="main-header__drivers" href="http://www.gtl-h.ru/">Ищем водителей категории Е</a>
 	            <a class="main-header__contacts-button" href="#contacts" data-scroll>Контакты</a>
 	        </div>
 	    </div>
@@ -24,7 +24,7 @@
 	        <span class="menu-button__line-3"></span>
 	    </button>
 	</header>
-	<div class="landing">
+	<main class="landing">
 		<div class="landing__intro">
 			<div class="landing__intro-content">
 				<div class="landing__intro-logo">
@@ -368,7 +368,14 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</main>
+	<footer class="main-footer">
+		<div class="uk-container">
+			<div class="main-footer__content">
+				<a class="main-footer__developer" href="http://domenart-studio.ru/" target="_blank">Разработка сайта веб-студия "ДоменАРТ"</a>
+			</div>
+		</div>
+	</footer>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/dist/bundle.js"></script>
 	</body>
 </html>
