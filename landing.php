@@ -14,7 +14,7 @@
 	            </ul>
 	        </nav>
 	        <div class="main-header__rightside">
-	            <a class="main-header__drivers" href="http://www.gtl-h.ru/">Ищем водителей категории Е</a>
+	            <a class="main-header__drivers" href="http://www.gtl-h.ru/" target="_blank">Ищем водителей категории Е</a>
 	            <a class="main-header__contacts-button" href="#contacts" data-scroll>Контакты</a>
 	        </div>
 	    </div>
