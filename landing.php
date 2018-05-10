@@ -370,9 +370,7 @@
 		</div>
 	</main>
 	<footer class="main-footer">
-		<div class="main-footer__content">
-			<a class="main-footer__developer" href="http://domenart-studio.ru/" target="_blank">Разработка сайта веб-студия "ДоменАРТ"</a>
-		</div>
+		<a class="main-footer__developer" href="http://domenart-studio.ru/" target="_blank">Разработка сайта веб-студия "ДоменАРТ"</a>
 	</footer>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/dist/bundle.js"></script>
 	</body>
