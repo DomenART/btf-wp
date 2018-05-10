@@ -6399,6 +6399,9 @@ a.text-dark:hover, a.text-dark:focus {
   .landing__intro-logo img {
     width: 400px;
     height: 147px; }
+    @media (max-width: 640px) {
+      .landing__intro-logo img {
+        width: 300px; } }
 
 .landing__intro-title {
   margin-bottom: 45px;
