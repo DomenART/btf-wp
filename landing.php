@@ -62,7 +62,7 @@
 					$params = array(
 						'post_type' => 'technics',
 						'numberposts' => -1,
-						'order'     => 'ASC'
+						'order'     => 'DESC'
 					);
 					$posts = get_posts($params);
 				?>
