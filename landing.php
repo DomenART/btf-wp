@@ -370,7 +370,7 @@
 		</div>
 	</main>
 	<footer class="main-footer">
-		<div class="uk-container">
+		<div class="container">
 			<div class="main-footer__content">
 				<a class="main-footer__developer" href="http://domenart-studio.ru/" target="_blank">Разработка сайта веб-студия "ДоменАРТ"</a>
 			</div>
