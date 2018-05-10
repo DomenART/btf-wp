@@ -6923,6 +6923,9 @@ a.text-dark:hover, a.text-dark:focus {
   color: #fff; }
   .main-footer__developer:hover {
     color: #fff; }
+  @media (max-width: 640px) {
+    .main-footer__developer {
+      font-size: 14px; } }
 
 .features-item {
   flex-basis: 20%;
