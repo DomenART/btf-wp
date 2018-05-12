@@ -87,7 +87,8 @@
 											<?php the_field('technic_title', $post->id); ?>
 										</div>
 										<div class="technics-item__parametres">
-											<?php the_field('technic_parametres', $post->id); ?>
+											<?php the_field('technic_parametres', $post->id);?>
+											<button class="technics-item__button js-purchase-btn" type="button" data-toggle="modal" data-target="#purchaseModal" data-product-id="<?php echo $product_id; ?>" data-product-title="<?php echo $product_title; ?>" data-product-price="<?php echo $product_price; ?>">Как купить?</button>
 										</div>
 									</div>
 									<div class="technics-item__photo">
@@ -117,6 +118,13 @@
 										</div>
 									</div>
 								</div>
+								<?php
+									$models = get_field('technic_models')
+									if ($models):
+										foreach($models, $post) as $key => $row):
+										$modelstatus = $row['technic_models-status'];
+										$product_price_from = $row['technic_models-from'];
+								?>
 								<div class="technics-item__products">
 									<table class="technics-item__table">
 										<thead>
@@ -129,10 +137,6 @@
 											</tr>
 										</thead>
 										<tbody>
-											<?php foreach(get_field('technic_models', $post) as $key => $row):
-												$modelstatus = $row['technic_models-status'];
-												$product_price_from = $row['technic_models-from'];
-											?>
 											<tr>
 												<td><?php echo $row['technic_models-title'] ?></td>
 												<td><?php echo $row['technic_models-year'] ?></td>
@@ -163,10 +167,14 @@
 													?>
 												</td>
 											</tr>
-											<?php endforeach; ?>
+											<?php
+												endforeach;
+												endif;
+										 	?>
 										</tbody>
 									</table>
 								</div>
+
 							</div>
 						</div>
 					<?php endforeach;
@@ -269,7 +277,7 @@
 		</section>
 		<section class="landings__contacts" id="contacts">
 			<div class="landings__contacts-map embed-responsive">
-				<iframe class="embed-responsive-item" src="https://yandex.ru/map-widget/v1/?um=constructor%3A0af0b2771bfa659533ab2d4b0cd41e5b1fe82f3b7ea98a551b80ed321b014650&amp;source=constructor" width="941" height="659" frameborder="0"></iframe>
+				<iframe class="embed-responsive-item" src="https://yandex.ru/map-widget/v1/?um=constructor%3A5f7bcfdbaf9b7fecec40d1c407e271c69f43f5d7e29f083e6790ecfec0fce0f5&amp;source=constructor" width="675" height="536" frameborder="0"></iframe>
 			</div>
 			<address class="landings__contacts-text">
 				<div class="landings__contacts-title">
@@ -307,10 +315,10 @@
 		<div class="modal-dialog" role="document">
 			<div class="purchase-popup__content modal-content">
 				<div class="purchase-popup__title">Как купить?</div>
-				<div class="purchase-popup__product-pool"></div>
+				<!-- <div class="purchase-popup__product-pool"></div>
 				<div class="purchase-popup__products-total">
 					Итого: <span class="js-total-cart"></span> р.
-				</div>
+				</div> -->
 				<div class="purchase-popup__text">
 					Заполните форму и мы свяжемся с вами в ближайшее время. Обсудим состояние автомобиля, варианты осмотра и способы оплаты.
 				</div>
