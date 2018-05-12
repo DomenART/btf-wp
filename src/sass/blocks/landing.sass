@@ -31,8 +31,11 @@
 .landing__intro-logo
     margin-bottom: 65px
     img
-        width: 280px
+        width: 400px
         height: 147px
+        @media (max-width: 640px)
+            width: 300px
+
 
 .landing__intro-title
     margin-bottom: 45px
@@ -70,15 +73,15 @@
         position: absolute
         bottom: 0
         left: 0
-        border-bottom: 1px solid rgba(202, 32, 39, 0.2)
+        border-bottom: 1px solid $theme-color
 
-.landing__features-grid
-    display: grid
-    grid-template-columns: repeat(4, 1fr)
-    align-items: flex-start
+.landing__features-cols
+    display: flex
+    justify-content: center
     margin-top: 45px
     @media (max-width: 960px)
-        grid-template-columns: 1fr
+        flex-direction: column
+        align-items: center
 
 .landing__technics
     margin-bottom: 40px

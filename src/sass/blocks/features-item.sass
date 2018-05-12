@@ -1,8 +1,9 @@
 .features-item
+    flex-basis: 20%
+    flex-grow: 1
     display: flex
     flex-direction: column
     align-items: center
-    height: 100%
     padding: 35px
     margin: 0
     border-bottom: 0
@@ -13,6 +14,7 @@
     &:last-of-type
         border-right: 0
     @media (max-width: 960px)
+        width: 100%
         padding: 35px
         border-right: 0
         border-bottom: 1px solid $theme-color

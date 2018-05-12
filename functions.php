@@ -33,7 +33,8 @@ function create_post_type()
         'supports' => array(
             'title',
             'editor',
-            'thumbnail'
+            'thumbnail',
+            'page-attributes'
         ),
         'can_export' => true,
         'taxonomies' => array()
